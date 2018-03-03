@@ -26,6 +26,11 @@
 		75EB438F204A946200114C8A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB438E204A946200114C8A /* AppConstants.swift */; };
 		75EB4391204A95BD00114C8A /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB4390204A95BD00114C8A /* AppUtils.swift */; };
 		75EB4393204A97A800114C8A /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB4392204A97A800114C8A /* URLConstants.swift */; };
+		75EB439B204AB1B300114C8A /* Show+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB4399204AB1B300114C8A /* Show+CoreDataClass.swift */; };
+		75EB439C204AB1B300114C8A /* Show+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB439A204AB1B300114C8A /* Show+CoreDataProperties.swift */; };
+		75EB439F204AB1F600114C8A /* ShowRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB439E204AB1F600114C8A /* ShowRepo.swift */; };
+		75EB43A1204AB28E00114C8A /* CoreDataRepoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB43A0204AB28E00114C8A /* CoreDataRepoUtils.swift */; };
+		75EB43A3204ABE3800114C8A /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB43A2204ABE3800114C8A /* CoreDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,11 @@
 		75EB438E204A946200114C8A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		75EB4390204A95BD00114C8A /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		75EB4392204A97A800114C8A /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		75EB4399204AB1B300114C8A /* Show+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Show+CoreDataClass.swift"; sourceTree = "<group>"; };
+		75EB439A204AB1B300114C8A /* Show+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Show+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		75EB439E204AB1F600114C8A /* ShowRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRepo.swift; sourceTree = "<group>"; };
+		75EB43A0204AB28E00114C8A /* CoreDataRepoUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepoUtils.swift; sourceTree = "<group>"; };
+		75EB43A2204ABE3800114C8A /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +210,9 @@
 		75EB4378204A8EA700114C8A /* coredata */ = {
 			isa = PBXGroup;
 			children = (
+				75EB43A2204ABE3800114C8A /* CoreDataService.swift */,
+				75EB439D204AB1C900114C8A /* repos */,
+				75EB4394204AB0E100114C8A /* entities */,
 				75EB4349204A877900114C8A /* ShowIN_Now.xcdatamodeld */,
 			);
 			path = coredata;
@@ -247,6 +260,24 @@
 				75EB438C204A941A00114C8A /* StringExtensions.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		75EB4394204AB0E100114C8A /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				75EB4399204AB1B300114C8A /* Show+CoreDataClass.swift */,
+				75EB439A204AB1B300114C8A /* Show+CoreDataProperties.swift */,
+			);
+			path = entities;
+			sourceTree = "<group>";
+		};
+		75EB439D204AB1C900114C8A /* repos */ = {
+			isa = PBXGroup;
+			children = (
+				75EB439E204AB1F600114C8A /* ShowRepo.swift */,
+				75EB43A0204AB28E00114C8A /* CoreDataRepoUtils.swift */,
+			);
+			path = repos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,18 +415,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75EB439F204AB1F600114C8A /* ShowRepo.swift in Sources */,
+				75EB43A1204AB28E00114C8A /* CoreDataRepoUtils.swift in Sources */,
+				75EB439B204AB1B300114C8A /* Show+CoreDataClass.swift in Sources */,
 				75EB4345204A877900114C8A /* ViewController.swift in Sources */,
 				75EB437F204A904900114C8A /* ObjectMapper.swift in Sources */,
 				75EB438D204A941A00114C8A /* StringExtensions.swift in Sources */,
 				75EB4391204A95BD00114C8A /* AppUtils.swift in Sources */,
 				75EB438F204A946200114C8A /* AppConstants.swift in Sources */,
 				75EB437D204A8FAF00114C8A /* NetworkClient.swift in Sources */,
+				75EB439C204AB1B300114C8A /* Show+CoreDataProperties.swift in Sources */,
 				75EB4393204A97A800114C8A /* URLConstants.swift in Sources */,
 				75EB4343204A877900114C8A /* AppDelegate.swift in Sources */,
 				75EB4386204A933D00114C8A /* AppEnums.swift in Sources */,
 				75EB4381204A908800114C8A /* NetworkChecker.swift in Sources */,
 				75EB437B204A8F7C00114C8A /* NetworkService.swift in Sources */,
 				75EB434B204A877900114C8A /* ShowIN_Now.xcdatamodeld in Sources */,
+				75EB43A3204ABE3800114C8A /* CoreDataService.swift in Sources */,
 				75EB4383204A912000114C8A /* ResponseValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
