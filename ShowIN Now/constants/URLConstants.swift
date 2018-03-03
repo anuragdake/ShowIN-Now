@@ -9,5 +9,6 @@
 import Foundation
 
 struct URLConstants {
-    public static let BASE_URL = ""
+    public static let BASE_URL = "http://api.tvmaze.com/"
+    public static let SCHEDULE = "schedule"
 }
