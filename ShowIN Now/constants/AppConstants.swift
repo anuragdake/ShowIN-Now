@@ -10,4 +10,7 @@ import Foundation
 
 struct AppConstants {
     static let DEFAULT_ERROR_KEY = "message"
+    
+    //Notification Strings
+    static let TABLE_VIEW_SELECTION_NOTIFICATION = "com.anurag.ShowIN-Now.SelectionInsideTableView"
 }

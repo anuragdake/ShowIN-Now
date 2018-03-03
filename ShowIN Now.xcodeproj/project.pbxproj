@@ -40,6 +40,7 @@
 		75EB43BA204B04E800114C8A /* splash_screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 75EB43B8204B04E800114C8A /* splash_screen.jpg */; };
 		75EB43BB204B04E800114C8A /* show.png in Resources */ = {isa = PBXBuildFile; fileRef = 75EB43B9204B04E800114C8A /* show.png */; };
 		75EB43BD204B083300114C8A /* ImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB43BC204B083300114C8A /* ImageExtensions.swift */; };
+		75EB43BF204B15FA00114C8A /* ShowDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB43BE204B15FA00114C8A /* ShowDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		75EB43B8204B04E800114C8A /* splash_screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splash_screen.jpg; sourceTree = "<group>"; };
 		75EB43B9204B04E800114C8A /* show.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = show.png; sourceTree = "<group>"; };
 		75EB43BC204B083300114C8A /* ImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtensions.swift; sourceTree = "<group>"; };
+		75EB43BE204B15FA00114C8A /* ShowDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				75EB4344204A877900114C8A /* HomeViewController.swift */,
+				75EB43BE204B15FA00114C8A /* ShowDetailsViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				75EB437D204A8FAF00114C8A /* NetworkClient.swift in Sources */,
 				75EB439C204AB1B300114C8A /* Show+CoreDataProperties.swift in Sources */,
 				75EB4393204A97A800114C8A /* URLConstants.swift in Sources */,
+				75EB43BF204B15FA00114C8A /* ShowDetailsViewController.swift in Sources */,
 				75EB4343204A877900114C8A /* AppDelegate.swift in Sources */,
 				75EB4386204A933D00114C8A /* AppEnums.swift in Sources */,
 				75EB43A6204AC29900114C8A /* DataSyncer.swift in Sources */,

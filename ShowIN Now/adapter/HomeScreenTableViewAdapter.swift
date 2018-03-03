@@ -37,6 +37,14 @@ class HomeScreenTableViewAdapter: NSObject, UITableViewDelegate, UITableViewData
         let showItem = showsList[indexPath.row]
         cell.setData(show: showItem)
         return cell
-        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        postNotification(data: showsList[indexPath.row])
+    }
+    
+    func postNotification(data: AnyObject){
+        let userInfoData:Dictionary<String, AnyObject> = ["data": data]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: AppConstants.TABLE_VIEW_SELECTION_NOTIFICATION), object: nil, userInfo: userInfoData)
     }
 }

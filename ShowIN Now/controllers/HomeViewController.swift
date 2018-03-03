@@ -22,6 +22,16 @@ class HomeViewController: UIViewController, DataSyncDelegate {
         startDataSync()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(onHomeScreenTableCellClicked(_:)), name: NSNotification.Name(rawValue: AppConstants.TABLE_VIEW_SELECTION_NOTIFICATION), object: nil)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: AppConstants.TABLE_VIEW_SELECTION_NOTIFICATION), object: nil)
+    }
+    
     private func initialise(){
         configure(tableView: homeScreenTableView)
         loadData()
@@ -55,6 +65,15 @@ class HomeViewController: UIViewController, DataSyncDelegate {
             self.present(alertController, animated: true, completion: nil)
         }
         hideActivityIndicator()
+    }
+    
+    @objc private func onHomeScreenTableCellClicked(_ notification: NSNotification){
+        guard let show = notification.userInfo?["data"] as? Show else{ return }
+        guard let showDetailsViewController = self.storyboard?.instantiateViewController(withIdentifier:"ShowDetailsViewController") as? ShowDetailsViewController else{
+            return
+        }
+        showDetailsViewController.show = show
+        self.present(showDetailsViewController, animated: true, completion: nil)
     }
     
     private func showActivityIndicator(){
