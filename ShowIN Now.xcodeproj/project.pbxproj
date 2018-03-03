@@ -15,6 +15,22 @@
 		75EB4350204A877900114C8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75EB434E204A877900114C8A /* LaunchScreen.storyboard */; };
 		75EB435B204A877900114C8A /* ShowIN_NowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB435A204A877900114C8A /* ShowIN_NowTests.swift */; };
 		75EB4366204A877900114C8A /* ShowIN_NowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB4365204A877900114C8A /* ShowIN_NowUITests.swift */; };
+		75EB437B204A8F7C00114C8A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB437A204A8F7C00114C8A /* NetworkService.swift */; };
+		75EB437D204A8FAF00114C8A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB437C204A8FAF00114C8A /* NetworkClient.swift */; };
+		75EB437F204A904900114C8A /* ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB437E204A904900114C8A /* ObjectMapper.swift */; };
+		75EB4381204A908800114C8A /* NetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB4380204A908800114C8A /* NetworkChecker.swift */; };
+		75EB4383204A912000114C8A /* ResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB4382204A912000114C8A /* ResponseValidator.swift */; };
+		75EB4386204A933D00114C8A /* AppEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB4385204A933D00114C8A /* AppEnums.swift */; };
+		75EB438A204A938F00114C8A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75EB4389204A938F00114C8A /* Localizable.strings */; };
+		75EB438D204A941A00114C8A /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB438C204A941A00114C8A /* StringExtensions.swift */; };
+		75EB438F204A946200114C8A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB438E204A946200114C8A /* AppConstants.swift */; };
+		75EB4391204A95BD00114C8A /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB4390204A95BD00114C8A /* AppUtils.swift */; };
+		75EB4393204A97A800114C8A /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB4392204A97A800114C8A /* URLConstants.swift */; };
+		75EB439B204AB1B300114C8A /* Show+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB4399204AB1B300114C8A /* Show+CoreDataClass.swift */; };
+		75EB439C204AB1B300114C8A /* Show+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB439A204AB1B300114C8A /* Show+CoreDataProperties.swift */; };
+		75EB439F204AB1F600114C8A /* ShowRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB439E204AB1F600114C8A /* ShowRepo.swift */; };
+		75EB43A1204AB28E00114C8A /* CoreDataRepoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB43A0204AB28E00114C8A /* CoreDataRepoUtils.swift */; };
+		75EB43A3204ABE3800114C8A /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB43A2204ABE3800114C8A /* CoreDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +65,22 @@
 		75EB4361204A877900114C8A /* ShowIN NowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ShowIN NowUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75EB4365204A877900114C8A /* ShowIN_NowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowIN_NowUITests.swift; sourceTree = "<group>"; };
 		75EB4367204A877900114C8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75EB437A204A8F7C00114C8A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		75EB437C204A8FAF00114C8A /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		75EB437E204A904900114C8A /* ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapper.swift; sourceTree = "<group>"; };
+		75EB4380204A908800114C8A /* NetworkChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChecker.swift; sourceTree = "<group>"; };
+		75EB4382204A912000114C8A /* ResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseValidator.swift; sourceTree = "<group>"; };
+		75EB4385204A933D00114C8A /* AppEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnums.swift; sourceTree = "<group>"; };
+		75EB4389204A938F00114C8A /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		75EB438C204A941A00114C8A /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		75EB438E204A946200114C8A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		75EB4390204A95BD00114C8A /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
+		75EB4392204A97A800114C8A /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		75EB4399204AB1B300114C8A /* Show+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Show+CoreDataClass.swift"; sourceTree = "<group>"; };
+		75EB439A204AB1B300114C8A /* Show+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Show+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		75EB439E204AB1F600114C8A /* ShowRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRepo.swift; sourceTree = "<group>"; };
+		75EB43A0204AB28E00114C8A /* CoreDataRepoUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepoUtils.swift; sourceTree = "<group>"; };
+		75EB43A2204ABE3800114C8A /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +131,17 @@
 		75EB4341204A877900114C8A /* ShowIN Now */ = {
 			isa = PBXGroup;
 			children = (
+				75EB4373204A8D9400114C8A /* controllers */,
+				75EB4374204A8E0000114C8A /* storyboards */,
+				75EB4384204A932A00114C8A /* enums */,
+				75EB4375204A8E5A00114C8A /* constants */,
+				75EB438B204A940800114C8A /* extensions */,
+				75EB4377204A8E8B00114C8A /* services */,
+				75EB4387204A936200114C8A /* resources */,
+				75EB4376204A8E6800114C8A /* utils */,
 				75EB4342204A877900114C8A /* AppDelegate.swift */,
-				75EB4344204A877900114C8A /* ViewController.swift */,
-				75EB4346204A877900114C8A /* Main.storyboard */,
 				75EB434C204A877900114C8A /* Assets.xcassets */,
-				75EB434E204A877900114C8A /* LaunchScreen.storyboard */,
 				75EB4351204A877900114C8A /* Info.plist */,
-				75EB4349204A877900114C8A /* ShowIN_Now.xcdatamodeld */,
 			);
 			path = "ShowIN Now";
 			sourceTree = "<group>";
@@ -126,6 +162,122 @@
 				75EB4367204A877900114C8A /* Info.plist */,
 			);
 			path = "ShowIN NowUITests";
+			sourceTree = "<group>";
+		};
+		75EB4373204A8D9400114C8A /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				75EB4344204A877900114C8A /* ViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		75EB4374204A8E0000114C8A /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				75EB4346204A877900114C8A /* Main.storyboard */,
+				75EB434E204A877900114C8A /* LaunchScreen.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
+		75EB4375204A8E5A00114C8A /* constants */ = {
+			isa = PBXGroup;
+			children = (
+				75EB438E204A946200114C8A /* AppConstants.swift */,
+				75EB4392204A97A800114C8A /* URLConstants.swift */,
+			);
+			path = constants;
+			sourceTree = "<group>";
+		};
+		75EB4376204A8E6800114C8A /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				75EB4390204A95BD00114C8A /* AppUtils.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		75EB4377204A8E8B00114C8A /* services */ = {
+			isa = PBXGroup;
+			children = (
+				75EB4379204A8F2100114C8A /* network */,
+				75EB4378204A8EA700114C8A /* coredata */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		75EB4378204A8EA700114C8A /* coredata */ = {
+			isa = PBXGroup;
+			children = (
+				75EB43A2204ABE3800114C8A /* CoreDataService.swift */,
+				75EB439D204AB1C900114C8A /* repos */,
+				75EB4394204AB0E100114C8A /* entities */,
+				75EB4349204A877900114C8A /* ShowIN_Now.xcdatamodeld */,
+			);
+			path = coredata;
+			sourceTree = "<group>";
+		};
+		75EB4379204A8F2100114C8A /* network */ = {
+			isa = PBXGroup;
+			children = (
+				75EB437A204A8F7C00114C8A /* NetworkService.swift */,
+				75EB437C204A8FAF00114C8A /* NetworkClient.swift */,
+				75EB437E204A904900114C8A /* ObjectMapper.swift */,
+				75EB4382204A912000114C8A /* ResponseValidator.swift */,
+				75EB4380204A908800114C8A /* NetworkChecker.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		75EB4384204A932A00114C8A /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				75EB4385204A933D00114C8A /* AppEnums.swift */,
+			);
+			path = enums;
+			sourceTree = "<group>";
+		};
+		75EB4387204A936200114C8A /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				75EB4388204A937000114C8A /* strings */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		75EB4388204A937000114C8A /* strings */ = {
+			isa = PBXGroup;
+			children = (
+				75EB4389204A938F00114C8A /* Localizable.strings */,
+			);
+			path = strings;
+			sourceTree = "<group>";
+		};
+		75EB438B204A940800114C8A /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				75EB438C204A941A00114C8A /* StringExtensions.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		75EB4394204AB0E100114C8A /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				75EB4399204AB1B300114C8A /* Show+CoreDataClass.swift */,
+				75EB439A204AB1B300114C8A /* Show+CoreDataProperties.swift */,
+			);
+			path = entities;
+			sourceTree = "<group>";
+		};
+		75EB439D204AB1C900114C8A /* repos */ = {
+			isa = PBXGroup;
+			children = (
+				75EB439E204AB1F600114C8A /* ShowRepo.swift */,
+				75EB43A0204AB28E00114C8A /* CoreDataRepoUtils.swift */,
+			);
+			path = repos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75EB4350204A877900114C8A /* LaunchScreen.storyboard in Resources */,
+				75EB438A204A938F00114C8A /* Localizable.strings in Resources */,
 				75EB434D204A877900114C8A /* Assets.xcassets in Resources */,
 				75EB4348204A877900114C8A /* Main.storyboard in Resources */,
 			);
@@ -262,9 +415,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75EB439F204AB1F600114C8A /* ShowRepo.swift in Sources */,
+				75EB43A1204AB28E00114C8A /* CoreDataRepoUtils.swift in Sources */,
+				75EB439B204AB1B300114C8A /* Show+CoreDataClass.swift in Sources */,
 				75EB4345204A877900114C8A /* ViewController.swift in Sources */,
+				75EB437F204A904900114C8A /* ObjectMapper.swift in Sources */,
+				75EB438D204A941A00114C8A /* StringExtensions.swift in Sources */,
+				75EB4391204A95BD00114C8A /* AppUtils.swift in Sources */,
+				75EB438F204A946200114C8A /* AppConstants.swift in Sources */,
+				75EB437D204A8FAF00114C8A /* NetworkClient.swift in Sources */,
+				75EB439C204AB1B300114C8A /* Show+CoreDataProperties.swift in Sources */,
+				75EB4393204A97A800114C8A /* URLConstants.swift in Sources */,
 				75EB4343204A877900114C8A /* AppDelegate.swift in Sources */,
+				75EB4386204A933D00114C8A /* AppEnums.swift in Sources */,
+				75EB4381204A908800114C8A /* NetworkChecker.swift in Sources */,
+				75EB437B204A8F7C00114C8A /* NetworkService.swift in Sources */,
 				75EB434B204A877900114C8A /* ShowIN_Now.xcdatamodeld in Sources */,
+				75EB43A3204ABE3800114C8A /* CoreDataService.swift in Sources */,
+				75EB4383204A912000114C8A /* ResponseValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

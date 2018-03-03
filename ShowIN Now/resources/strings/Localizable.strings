@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  ShowIN Now
+
+  Created by Anurag Dake on 03/03/18.
+  Copyright © 2018 Anurag Dake. All rights reserved.
+*/
+
+"network_error_title" = "Network Error!";
+"network_error_message" = "Please check your internet connection.";
+"default_error_message" = "An error occured.";
