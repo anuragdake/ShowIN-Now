@@ -10,4 +10,19 @@ import UIKit
 
 class ShowTableViewCell: UITableViewCell{
     
+    @IBOutlet weak var showImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var ratingsLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var genreLabel: UILabel!
+    
+    func setData(show: Show){
+        if let url = show.imageUrl{
+            showImageView.loadImageUsingCache(withUrl: url)
+        }
+        nameLabel.text = show.name ?? "NA"
+        ratingsLabel.text = String(show.rating)
+        typeLabel.text = show.type ?? "NA"
+        genreLabel.text = (show.genres ?? ["NA"]).joined(separator: " | ")
+    }
 }

@@ -28,6 +28,7 @@ class HomeViewController: UIViewController, DataSyncDelegate {
     }
     
     private func startDataSync(){
+        showActivityIndicator()
         homeScreenInteractor.startSyncingMetaData(dataSyncDelegate: self)
     }
     
@@ -49,17 +50,11 @@ class HomeViewController: UIViewController, DataSyncDelegate {
             loadData()
         }else{
             let alertController = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
-            
-//            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel){
-//                (result : UIAlertAction) -> Void in
-//
-//            }
-            
             let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: nil)
         }
-        
+        hideActivityIndicator()
     }
     
     private func showActivityIndicator(){

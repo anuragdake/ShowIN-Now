@@ -12,7 +12,7 @@ class HomeScreenTableViewAdapter: NSObject, UITableViewDelegate, UITableViewData
     
     var showsList = [Show]()
     private let homescreenTableViewCellIdentifier = "ShowTableViewCell"
-    private let TABLEVIEW_HEIGHT: CGFloat = 100
+    private let TABLEVIEW_HEIGHT: CGFloat = 150
     
     func homescreenTableViewCell() -> UINib{
         return UINib(nibName: homescreenTableViewCellIdentifier, bundle: nil)
@@ -35,7 +35,7 @@ class HomeScreenTableViewAdapter: NSObject, UITableViewDelegate, UITableViewData
             return UITableViewCell()
         }
         let showItem = showsList[indexPath.row]
-//        cell.item = item
+        cell.setData(show: showItem)
         return cell
         
     }
