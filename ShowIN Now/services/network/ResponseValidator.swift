@@ -10,7 +10,7 @@ import Foundation
 
 class ResponseValidator{
     
-    func responseWithValidation(response: URLResponse?, data: Data?, error: Error?, objectMapper: ObjectMapper) -> (responseStatus: ResponseStatus, responseData: [String: AnyObject]){
+    func responseWithValidation(response: URLResponse?, data: Data?, error: Error?, objectMapper: ObjectMapper) -> (responseStatus: ResponseStatus, responseData: [[String: AnyObject]]){
         
         guard error == nil && response != nil else {
             return (.error, defaultErrorDictionary())
@@ -24,15 +24,15 @@ class ResponseValidator{
         
         switch httpStatusCode {
         case 200:
-            return (.success, jsonData ?? [:])
+            return (.success, [jsonData ?? [:]])
         default:
             return (.error, defaultErrorDictionary())
         }
     }
     
-    private func defaultErrorDictionary() -> [String : AnyObject] {
+    private func defaultErrorDictionary() -> [[String : AnyObject]] {
         var defaultError = [String : AnyObject]()
         defaultError[AppConstants.DEFAULT_ERROR_KEY] = "default_error_message".localized as AnyObject?
-        return defaultError
+        return [defaultError]
     }
 }
