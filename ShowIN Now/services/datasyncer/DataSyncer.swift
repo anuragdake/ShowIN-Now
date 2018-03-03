@@ -60,7 +60,7 @@ class DataSyncer: Operation{
     }
     
     private func storeShowsData(data: [[String : AnyObject]]?){
-        let showsRepo = ShowRepo(managedContext: managedObjectContext)
+        let showsRepo = ShowRepo(managedContext: mainManagedObjectContext)
         
         if !showsRepo.deleteAllShows() {
             isSyncError = true

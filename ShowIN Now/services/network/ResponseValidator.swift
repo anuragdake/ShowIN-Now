@@ -20,11 +20,12 @@ class ResponseValidator{
         }
         
         let httpStatusCode = httpStatus.statusCode
-        let jsonData = objectMapper.getJSON(from: data)
+        
+        let jsonData = objectMapper.getJSONArray(from: data)
         
         switch httpStatusCode {
         case 200:
-            return (.success, [jsonData ?? [:]])
+            return (.success, jsonData)
         default:
             return (.error, defaultErrorDictionary())
         }

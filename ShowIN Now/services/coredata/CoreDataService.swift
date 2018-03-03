@@ -11,14 +11,18 @@ import CoreData
 
 public class CoreDataService {
     public let persistentStoreCoordinator : NSPersistentStoreCoordinator?
-    private let databaseName: String = "ShowIn-Now"
+    private let databaseName: String = "ShowIN_Now"
     
     public static let sharedInstance = CoreDataService()
     
     private init() {
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let applicationDocumentsDirectoryurls: NSURL = urls[urls.count - 1] as NSURL
-        let managedObjectModel = NSManagedObjectModel(contentsOf: Bundle.main.url(forResource: databaseName, withExtension: "momd")!)!
+        
+        let dbUrl = Bundle.main.url(forResource: databaseName, withExtension: "momd")
+        
+        
+        let managedObjectModel = NSManagedObjectModel(contentsOf: dbUrl!)!
         persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
         let url = applicationDocumentsDirectoryurls.appendingPathComponent(databaseName + ".sqlite")
         do {

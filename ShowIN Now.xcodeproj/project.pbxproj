@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		75EB4343204A877900114C8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB4342204A877900114C8A /* AppDelegate.swift */; };
-		75EB4345204A877900114C8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB4344204A877900114C8A /* ViewController.swift */; };
+		75EB4345204A877900114C8A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB4344204A877900114C8A /* HomeViewController.swift */; };
 		75EB4348204A877900114C8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75EB4346204A877900114C8A /* Main.storyboard */; };
 		75EB434B204A877900114C8A /* ShowIN_Now.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75EB4349204A877900114C8A /* ShowIN_Now.xcdatamodeld */; };
 		75EB434D204A877900114C8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75EB434C204A877900114C8A /* Assets.xcassets */; };
@@ -33,6 +33,10 @@
 		75EB43A3204ABE3800114C8A /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB43A2204ABE3800114C8A /* CoreDataService.swift */; };
 		75EB43A6204AC29900114C8A /* DataSyncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB43A5204AC29900114C8A /* DataSyncer.swift */; };
 		75EB43A9204AC2F400114C8A /* DataSyncDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB43A8204AC2F400114C8A /* DataSyncDelegate.swift */; };
+		75EB43AE204AD97B00114C8A /* ShowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75EB43AD204AD97B00114C8A /* ShowTableViewCell.xib */; };
+		75EB43B0204AD98800114C8A /* ShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB43AF204AD98800114C8A /* ShowTableViewCell.swift */; };
+		75EB43B3204ADAF000114C8A /* HomeScreenTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB43B2204ADAF000114C8A /* HomeScreenTableViewAdapter.swift */; };
+		75EB43B6204ADDD500114C8A /* HomeScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB43B5204ADDD500114C8A /* HomeScreenInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +59,7 @@
 /* Begin PBXFileReference section */
 		75EB433F204A877900114C8A /* ShowIN Now.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShowIN Now.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75EB4342204A877900114C8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		75EB4344204A877900114C8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		75EB4344204A877900114C8A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		75EB4347204A877900114C8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75EB434A204A877900114C8A /* ShowIN_Now.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShowIN_Now.xcdatamodel; sourceTree = "<group>"; };
 		75EB434C204A877900114C8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +89,10 @@
 		75EB43A2204ABE3800114C8A /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		75EB43A5204AC29900114C8A /* DataSyncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSyncer.swift; sourceTree = "<group>"; };
 		75EB43A8204AC2F400114C8A /* DataSyncDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSyncDelegate.swift; sourceTree = "<group>"; };
+		75EB43AD204AD97B00114C8A /* ShowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowTableViewCell.xib; sourceTree = "<group>"; };
+		75EB43AF204AD98800114C8A /* ShowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTableViewCell.swift; sourceTree = "<group>"; };
+		75EB43B2204ADAF000114C8A /* HomeScreenTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenTableViewAdapter.swift; sourceTree = "<group>"; };
+		75EB43B5204ADDD500114C8A /* HomeScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,9 +143,12 @@
 		75EB4341204A877900114C8A /* ShowIN Now */ = {
 			isa = PBXGroup;
 			children = (
+				75EB43B1204ADAD500114C8A /* adapter */,
 				75EB43A7204AC2D400114C8A /* protocols */,
 				75EB4373204A8D9400114C8A /* controllers */,
+				75EB43B4204ADDB900114C8A /* interactors */,
 				75EB4374204A8E0000114C8A /* storyboards */,
+				75EB43AB204AD92600114C8A /* viewhelpers */,
 				75EB4384204A932A00114C8A /* enums */,
 				75EB4375204A8E5A00114C8A /* constants */,
 				75EB438B204A940800114C8A /* extensions */,
@@ -172,7 +183,7 @@
 		75EB4373204A8D9400114C8A /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				75EB4344204A877900114C8A /* ViewController.swift */,
+				75EB4344204A877900114C8A /* HomeViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -302,6 +313,39 @@
 			path = protocols;
 			sourceTree = "<group>";
 		};
+		75EB43AB204AD92600114C8A /* viewhelpers */ = {
+			isa = PBXGroup;
+			children = (
+				75EB43AC204AD93200114C8A /* xibviews */,
+			);
+			path = viewhelpers;
+			sourceTree = "<group>";
+		};
+		75EB43AC204AD93200114C8A /* xibviews */ = {
+			isa = PBXGroup;
+			children = (
+				75EB43AF204AD98800114C8A /* ShowTableViewCell.swift */,
+				75EB43AD204AD97B00114C8A /* ShowTableViewCell.xib */,
+			);
+			path = xibviews;
+			sourceTree = "<group>";
+		};
+		75EB43B1204ADAD500114C8A /* adapter */ = {
+			isa = PBXGroup;
+			children = (
+				75EB43B2204ADAF000114C8A /* HomeScreenTableViewAdapter.swift */,
+			);
+			path = adapter;
+			sourceTree = "<group>";
+		};
+		75EB43B4204ADDB900114C8A /* interactors */ = {
+			isa = PBXGroup;
+			children = (
+				75EB43B5204ADDD500114C8A /* HomeScreenInteractor.swift */,
+			);
+			path = interactors;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -411,6 +455,7 @@
 			files = (
 				75EB4350204A877900114C8A /* LaunchScreen.storyboard in Resources */,
 				75EB438A204A938F00114C8A /* Localizable.strings in Resources */,
+				75EB43AE204AD97B00114C8A /* ShowTableViewCell.xib in Resources */,
 				75EB434D204A877900114C8A /* Assets.xcassets in Resources */,
 				75EB4348204A877900114C8A /* Main.storyboard in Resources */,
 			);
@@ -437,15 +482,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75EB43B3204ADAF000114C8A /* HomeScreenTableViewAdapter.swift in Sources */,
 				75EB439F204AB1F600114C8A /* ShowRepo.swift in Sources */,
 				75EB43A1204AB28E00114C8A /* CoreDataRepoUtils.swift in Sources */,
 				75EB439B204AB1B300114C8A /* Show+CoreDataClass.swift in Sources */,
-				75EB4345204A877900114C8A /* ViewController.swift in Sources */,
+				75EB43B6204ADDD500114C8A /* HomeScreenInteractor.swift in Sources */,
+				75EB4345204A877900114C8A /* HomeViewController.swift in Sources */,
 				75EB437F204A904900114C8A /* ObjectMapper.swift in Sources */,
 				75EB438D204A941A00114C8A /* StringExtensions.swift in Sources */,
 				75EB4391204A95BD00114C8A /* AppUtils.swift in Sources */,
 				75EB43A9204AC2F400114C8A /* DataSyncDelegate.swift in Sources */,
 				75EB438F204A946200114C8A /* AppConstants.swift in Sources */,
+				75EB43B0204AD98800114C8A /* ShowTableViewCell.swift in Sources */,
 				75EB437D204A8FAF00114C8A /* NetworkClient.swift in Sources */,
 				75EB439C204AB1B300114C8A /* Show+CoreDataProperties.swift in Sources */,
 				75EB4393204A97A800114C8A /* URLConstants.swift in Sources */,

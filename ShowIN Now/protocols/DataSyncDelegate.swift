@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol DataSyncDelegate {
+protocol DataSyncDelegate: class {
     func onDataSyncComplete(status:Bool, errorTitle:String?, errorMessage:String?)
 }
