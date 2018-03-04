@@ -21,4 +21,18 @@ class ObjectMapper: NSObject {
             return nil
         }
     }
+    
+    func getJSONArray(from data:Data?) -> [[String:AnyObject]]{
+        guard let responseData = data else{
+            return []
+        }
+        do{
+            if let responseJSON = try JSONSerialization.jsonObject(with: responseData, options: .mutableLeaves) as?     [[String:AnyObject]]{
+                return responseJSON
+            }
+            return []
+        }catch{
+            return []
+        }
+    }
 }

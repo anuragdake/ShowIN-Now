@@ -23,7 +23,7 @@ public class NetworkClient{
     /**
      Perform GET network request.
      */
-    public func doGETRequest(requestURL: String, params: [String:AnyObject]?,httpBody:[String:AnyObject]?, completionHandler:@escaping (_ status: ResponseStatus, _ response: [String:AnyObject]?) -> Void){
+    public func doGETRequest(requestURL: String, params: [String:AnyObject]?,httpBody:[String:AnyObject]?, completionHandler:@escaping (_ status: ResponseStatus, _ response: [[String:AnyObject]]) -> Void){
         if networkChecker.isConnectedToNetwork(){
             doNetworkRequest(requestType: "GET", requestURL: requestURL, params: params,httpBody: httpBody, completionHandler: completionHandler)
         }else{
@@ -34,7 +34,7 @@ public class NetworkClient{
     /**
      Perform POST network request.
      */
-    public func doPOSTRequest(requestURL: String, params: [String:AnyObject]?,httpBody:[String:AnyObject]?, completionHandler:@escaping (_ status: ResponseStatus, _ response: [String:AnyObject]?) -> Void){
+    public func doPOSTRequest(requestURL: String, params: [String:AnyObject]?,httpBody:[String:AnyObject]?, completionHandler:@escaping (_ status: ResponseStatus, _ response: [[String:AnyObject]]) -> Void){
         if networkChecker.isConnectedToNetwork(){
             doNetworkRequest(requestType: "POST", requestURL: requestURL, params: params,httpBody: httpBody, completionHandler: completionHandler)
         }else{
@@ -42,7 +42,7 @@ public class NetworkClient{
         }
     }
     
-    private func doNetworkRequest(requestType: String, requestURL: String, params: [String:AnyObject]?, httpBody:[String:AnyObject]?, completionHandler:@escaping (_ status: ResponseStatus,_ response: [String:AnyObject]?) -> Void){
+    private func doNetworkRequest(requestType: String, requestURL: String, params: [String:AnyObject]?, httpBody:[String:AnyObject]?, completionHandler:@escaping (_ status: ResponseStatus,_ response: [[String:AnyObject]]) -> Void){
         let request = NSMutableURLRequest()
         request.url = URL.init(string: requestURL)
         request.httpMethod = requestType
@@ -73,7 +73,7 @@ public class NetworkClient{
         }
     }
     
-    private func createDataTask(with request: NSMutableURLRequest, completionHandler:@escaping (_ status: ResponseStatus, _ response: [String:AnyObject]?) -> Void){
+    private func createDataTask(with request: NSMutableURLRequest, completionHandler:@escaping (_ status: ResponseStatus, _ response: [[String:AnyObject]]) -> Void){
         let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) in
             let validatedResponse = self.responseValidator.responseWithValidation(response: response, data: data, error: error, objectMapper: self.objectMapper)
             completionHandler(validatedResponse.responseStatus, validatedResponse.responseData)
@@ -82,10 +82,10 @@ public class NetworkClient{
         task.resume()
     }
     
-    private func networkNotConnectedDictionary() -> [String:AnyObject]{
+    private func networkNotConnectedDictionary() -> [[String:AnyObject]]{
         var networkErrorDictionary = [String:AnyObject]()
         networkErrorDictionary["title"] = "network_error_title".localized as AnyObject?
         networkErrorDictionary["message"] = "network_error_message".localized as AnyObject?
-        return networkErrorDictionary
+        return [networkErrorDictionary]
     }
 }
