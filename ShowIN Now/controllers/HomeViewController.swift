@@ -15,6 +15,7 @@ class HomeViewController: UIViewController, DataSyncDelegate {
     
     private let homeScreenInteractor = HomeScreenInteractor()
     private let homeScreenTableViewAdapter = HomeScreenTableViewAdapter()
+    private let SHOW_DETAILS_VIEWCONTROLLER_IDENTIFIER = "ShowDetailsViewController"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,11 +70,11 @@ class HomeViewController: UIViewController, DataSyncDelegate {
     
     @objc private func onHomeScreenTableCellClicked(_ notification: NSNotification){
         guard let show = notification.userInfo?["data"] as? Show else{ return }
-        guard let showDetailsViewController = self.storyboard?.instantiateViewController(withIdentifier:"ShowDetailsViewController") as? ShowDetailsViewController else{
+        guard let showDetailsViewController = self.storyboard?.instantiateViewController(withIdentifier:SHOW_DETAILS_VIEWCONTROLLER_IDENTIFIER) as? ShowDetailsViewController else{
             return
         }
         showDetailsViewController.show = show
-        self.present(showDetailsViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(showDetailsViewController, animated: true)
     }
     
     private func showActivityIndicator(){
