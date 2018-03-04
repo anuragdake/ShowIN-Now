@@ -23,6 +23,10 @@ class ShowTableViewCell: UITableViewCell{
         nameLabel.text = show.name ?? "NA"
         ratingsLabel.text = String(show.rating)
         typeLabel.text = show.type ?? "NA"
-        genreLabel.text = (show.genres ?? ["NA"]).joined(separator: " | ")
+        genreLabel.text = genreText(genres: show.genres ?? [])
+    }
+    
+    func genreText(genres: [String]) -> String{
+        return (genres.count == 0) ? "NA" : genres.joined(separator: " | ")
     }
 }
